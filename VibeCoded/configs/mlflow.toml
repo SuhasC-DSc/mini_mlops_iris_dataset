@@ -1,0 +1,10 @@
+[mlflow]
+experiment_name = "iris-classification"
+run_name_prefix = "iris-rf"
+registered_model_name = "iris-random-forest"
+autolog = false
+
+[dagshub]
+enabled = true
+repo_owner_env = "DAGSHUB_REPO_OWNER"
+repo_name_env = "DAGSHUB_REPO_NAME"

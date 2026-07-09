@@ -1,0 +1,19 @@
+stages:
+  train:
+    cmd: uv run python scripts/train.py --run-name ${run_name}
+    deps:
+      - src/iris_mlops/data/loader.py
+      - src/iris_mlops/features/preprocess.py
+      - src/iris_mlops/models/trainer.py
+      - src/iris_mlops/pipelines/train_pipeline.py
+      - configs/data.toml
+      - configs/model.toml
+    params:
+      - configs/model.toml:
+          - model.params
+    outs:
+      - models/model.joblib
+      - models/scaler.joblib
+    metrics:
+      - metrics/metrics.json:
+          cache: false

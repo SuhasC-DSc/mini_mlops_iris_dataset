@@ -1,0 +1,13 @@
+[dataset]
+name = "iris"
+source = "sklearn"
+target_column = "target"
+raw_path = "data/raw/iris.csv"
+processed_path = "data/processed/iris_processed.csv"
+
+[split]
+test_size = 0.2
+val_size = 0.1
+random_state = 42
+shuffle = true
+stratify = true

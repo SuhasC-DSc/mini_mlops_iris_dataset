@@ -1,0 +1,8 @@
+[logging]
+level = "INFO"
+format = "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+date_format = "%Y-%m-%d %H:%M:%S"
+log_dir = "logs"
+log_file = "iris_mlops.log"
+console = true
+file = true

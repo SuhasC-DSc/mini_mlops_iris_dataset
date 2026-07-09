@@ -1,0 +1,4 @@
+[metrics]
+output_path = "metrics/metrics.json"
+average = "macro"
+report = ["accuracy", "precision", "recall", "f1"]
